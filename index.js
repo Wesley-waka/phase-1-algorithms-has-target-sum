@@ -1,17 +1,40 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for (var k = 0; k < array.length; k++) {
+    for (var m = 0; m <array.length; m++) {
+      if (array[k] + array[m] === target) {
+        return true;
+      }
+      else if(array[m] + array[m] === target || array[k]+array[k]===target) {
+        return false;
+      }
+      else if (array.length === 1) {
+        return false;
+      }
+    }
+  }
 }
+
+
+      
+  // loop through my array of num as i add them final result is to be compared with target
 
 /* 
   Write the Big O time complexity of your function here
 */
 
 /* 
-  Add your pseudocode here
+  for i=0 ; i<array.length ; i++){
+    array[i] + array.legth-[i]  
+      array[i]===target ? "True" : "False
+      }
+    }
+  }
 */
 
 /*
-  Add written explanation of your solution here
+  A Target Sum that will compute a apir of valuea in the array and 
+  true if the pairs are equal to target and false if the pairs are unequal.
 */
 
 // You can run `node index.js` to view these console logs
